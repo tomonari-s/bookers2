@@ -17,11 +17,13 @@ class BooksController < ApplicationController
 
  def index
    @books = Book.page(params[:page])
+   @user = User.find(params[:id])
  end
 
  def show
    @book = Book.find(params[:id])
    @book_comment = BookComment.new
+   @user = User.find(params[:id])
  end
 
  def destroy

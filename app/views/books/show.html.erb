@@ -1,7 +1,8 @@
+%= render 'list', books: @books %>
 <div>
   <%= image_tag @book.get_image %>
-  <p>ショップ名：<%= @book.title %></p>
-  <p>説明：<%= @book.body %></p>
+  <p>ショップ：<%= @book.title %></p>
+  <p>説：<%= @book.body %></p>
   <p>投稿ユーザー画像：<%= image_tag @book.user.get_profile_image(100,100) %></p>  
   
   <p>ユーザーネーム：<%= @book.user.name %></p>
