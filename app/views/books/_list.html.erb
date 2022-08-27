@@ -16,24 +16,24 @@
           
           
           <li>
-            <%= link_to user_path(1), class:"nav-link text-light" do %>
-              <i class="fa fa-home fa-w-18" ></i>Home
+            <%= link_to current_user , class:"nav-link text-light" do %>
+              <i class="fas fa-home fa-w-18" ></i> Home
             <% end %>
           </li>
           
           <li>
             <%= link_to users_path, class:"nav-link text-light" do %>
-              <i class="fa fa-users fa-w-20" ></i>Users
+              <i class="fa fa-users fa-w-20" ></i> Users
             <% end %>
           </li>
           <li>
             <%= link_to books_path, class:"nav-link text-light" do %>
-              <i class="fa fa-book-open fa-w-18"></i>Books
+              <i class="fa fa-book-open fa-w-18"></i> Books
             <% end %>
           </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete , class:"nav-link text-light" do %>
-              <i class="fa fa-sign-out-alt fa-w-16"></i>Log out
+              <i class="fa fa-sign-out-alt fa-w-16"></i> Log out
             <% end %>
           </li>
           
