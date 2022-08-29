@@ -1,9 +1,28 @@
-
-<%= render 'users/userinfo', user: @user %>
-
+  <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">  
+    <main>
+      
+      
+      <div class="container px-5 px-sm-0">
+      <div  id="error_explanation">
+      <% if @book.errors.any? %>
+  　     <h3><%= @book.errors.count %>errors prohibited this obj from being saved:</h3>
+  　     <ul>
+          <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+       <% end %>
+  　     </ul>
+    　<% end %>
+    　</div>
+      
+      
+      <div class="row">
+        <div class="col-md-3">
+      
+            <%= render 'users/userinfo', user: @user, book: @book %>
+            <%= render 'books/form', book: @book %>
               
-          
-          <div class="col-md-8 offset-md-1">
+        </div>  
+        <div class="col-md-8 offset-md-1">
               <h2>Books</h2>
             <table class="table table-hover table-inverse">
                 <thead>
@@ -18,7 +37,7 @@
               <% @books.each do |book| %>
               
                 <tr>
-                    <td><%= image_tag book.user.get_profile_image(100,100) %> </td>
+                    <td><%= image_tag book.user.get_profile_image(100,100) %></td>
                     <th><%= link_to book.title, book_path(book.id) %></th>
                     <th><%= book.body %></th>
                 </tr>
@@ -26,9 +45,10 @@
               <% end %>  
               </tbody> 
             </table>
-          </div>
+        </div>
           
         
       </div>
     </div>
-</main>
+  </main>
+</html>  

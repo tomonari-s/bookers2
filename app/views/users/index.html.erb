@@ -1,6 +1,15 @@
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">  
+  
+  <main>
+    <div class="container px-5 px-sm-0">
+      <div class="row">
+        <div class="col-md-3">
 
-<%= render 'users/userinfo', user: @user %>  
-          <div class="col-md-8 offset-md-1">
+          <%= render 'users/userinfo', user: @user %> 
+          <%= render 'books/form', book: @book %>
+        </div>  
+          
+        <div class="col-md-8 offset-md-1">
               <h2>Users</h2>
             <table class="table table-hover table-inverse">
                 <thead>
@@ -20,12 +29,11 @@
                   <% end %>
                 </tbody>
             </table>
-          </div>
+        </div>
           
         
       </div>
     </div>
-</main>
+  </main>
 
-
-<%= paginate @books %>
+</html>

@@ -7,14 +7,14 @@
       
           <div class="form-group">
             <label for="book_title">Title</label>
-            <%= f.text_field :book,class:"form-control book_title", autofocus: true, id:"book_title" %>
+            <%= f.text_field :title, :class =>'form-control book_title', autofocus: true, id:"book_title" %>
           </div>
           
           <div class="form-group">
             <label for="book_opinion">Opinion</label>
-            <%= f.text_area :book, class:"form-control book_body", autofocus: true, id:"book_body"  %>
-            
+            <%= f.text_area :body, class:"form-control book_body", autofocus: true, id:"book_body"  %>
           </div>
+          
           <div class="form-group">
             <%= f.submit "Update Book",class:"btn btn-success" %>
           </div>
